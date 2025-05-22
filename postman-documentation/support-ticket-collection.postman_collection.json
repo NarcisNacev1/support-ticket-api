@@ -1,0 +1,361 @@
+{
+	"info": {
+		"_postman_id": "d3926331-d236-420c-b08d-b9508d1060e3",
+		"name": "support-ticket-collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34687485",
+		"_collection_link": "https://scripted-9947.postman.co/workspace/MyProjects~1138537e-2dd5-41dc-892d-8400c5d4a1c8/collection/34687485-d3926331-d236-420c-b08d-b9508d1060e3?action=share&source=collection_link&creator=34687485"
+	},
+	"item": [
+		{
+			"name": "tickets",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Again Ticket\",\r\n  \"description\": \"aaasdasda\",\r\n  \"category\": \"\",\r\n  \"priority\": \"URGENT\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/tickets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"tickets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tickets/{id}",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "narcis1234",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8090/tickets/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"tickets",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tickets",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "narcis1234",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8090/tickets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"tickets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tickets/{id}",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "narcis1234",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8090/tickets/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"tickets",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tickets/{id}",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "narcis1234",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"banana\",\r\n  \"description\": \"AAAAA\",\r\n  \"priority\": \"LOW\",\r\n  \"category\": \"IT\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/tickets/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"tickets",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tickets/{id}/assign",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "narcis1234",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"assignedAgentId\": 2\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/tickets/6/assign",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"tickets",
+						"6",
+						"assign"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tickets/{id}/comments",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "narcis1234",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"content\": \"yoyo\",\r\n  \"author\": \"tech_support\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/tickets/6/comments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"tickets",
+						"6",
+						"comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tickets/{id}/escalate",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "narcis1234",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/tickets/5/escalate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"tickets",
+						"5",
+						"escalate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tickets/{id}/status",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "narcis1234",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\": \"CLOSED\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/tickets/5/status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"tickets",
+						"5",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tickets/{id}/feedback",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "narcis1234",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"rating\": 5,\r\n  \"comments\": \"Excellent support!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/tickets/5/feedback",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"tickets",
+						"5",
+						"feedback"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
